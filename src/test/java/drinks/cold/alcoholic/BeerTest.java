@@ -14,7 +14,7 @@ class BeerTest {
 
     @Nested
     @DisplayName("When you order beer")
-    class getSpirits {
+    class getBeers {
         @Test
         @DisplayName("with ice")
         void beerWithIce() {

@@ -68,9 +68,5 @@ class TeaBeverageTest {
             assertTrue(tea.hasMilk());
             assertFalse(tea.hasSugar());
         }
-
-
-
     }
-
 }

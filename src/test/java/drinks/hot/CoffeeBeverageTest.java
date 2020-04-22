@@ -36,7 +36,6 @@ class CoffeeBeverageTest {
             coffee.addIngredients(IngredientType.Sugar);
             coffee.addIngredients(IngredientType.Milk);
 
-
             assertEquals("This Coffee is made of water, coffee beans, sugar and milk.", personA.drink(coffee));
             assertTrue(coffee.hasMilk());
             assertTrue(coffee.hasSugar());
