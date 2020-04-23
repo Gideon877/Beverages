@@ -39,6 +39,8 @@ public class Beverage implements Drinkable {
     public boolean hasExtras() {
         return !ingredients.isEmpty();
     }
+
+
 }
 
 

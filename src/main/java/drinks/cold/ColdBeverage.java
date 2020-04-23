@@ -19,6 +19,11 @@ public class ColdBeverage extends Beverage {
     public boolean hasExtras() {return super.hasExtras();}
 
     @Override
+    public String getDrinkTips() {
+        return "It's hot out here. Enjoy your drink.....";
+    }
+
+    @Override
     public BeverageTemperature getTemperature() {
         if(hasIce()) {
             return BeverageTemperature.EXTREMELY_COLD;

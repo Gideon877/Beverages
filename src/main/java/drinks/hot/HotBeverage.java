@@ -4,9 +4,6 @@ import drinks.bar.BeverageTemperature;
 import drinks.bar.BeverageType;
 import drinks.bar.IngredientType;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import static drinks.bar.IngredientType.*;
 
 public class HotBeverage extends Beverage {
@@ -22,7 +19,8 @@ public class HotBeverage extends Beverage {
 
     @Override
     public String getDrinkTips() {
-        return String.format("This %s is made of %s.", drinkType.toString(), getIngredients());
+        String temperature = getTemperature().toString().toLowerCase().replace("_", " ");
+        return String.format("Order Name: %s\nIngredients: %s. \nTemperature: %s", drinkType.toString(), getIngredients(), temperature);
     }
 
     @Override
@@ -32,8 +30,12 @@ public class HotBeverage extends Beverage {
 
     @Override
     public BeverageTemperature getTemperature() {
-        System.out.println(ingredients.contains(Milk));
         if(hasMilk()) {
+            if(ingredients.contains(Ice)) {
+                return BeverageTemperature.ROOM_TEMPERATURE;
+            }
+            return BeverageTemperature.WARM;
+        } else if(ingredients.contains(Ice)) {
             return BeverageTemperature.WARM;
         }
         return BeverageTemperature.HOT;
@@ -41,7 +43,6 @@ public class HotBeverage extends Beverage {
 
     private String getIngredients() {
         StringBuilder message = new StringBuilder();
-
         if(drinkType.equals(BeverageType.Tea)) {
             if(ingredients.isEmpty()) {
                 return "water and teabag";

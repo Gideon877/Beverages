@@ -6,5 +6,6 @@ public enum BeverageType {
     Soda,
     Spirit,
     Juice,
+    Water,
     Beer
 }
