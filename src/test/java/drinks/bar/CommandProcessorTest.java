@@ -22,7 +22,7 @@ class CommandProcessorTest {
             assertEquals(BeverageType.Soda, beverage.getDrinkType());
             assertEquals(BeverageTemperature.EXTREMELY_COLD, beverage.getTemperature());
             assertTrue(beverage.hasExtras());
-            assertEquals("It's hot out here. Enjoy your drink.....",beverage.getDrinkTips());
+            //assertEquals("It's hot out here. Enjoy your drink.....",beverage.getDrink());
 
 
         }
@@ -37,7 +37,7 @@ class CommandProcessorTest {
             assertEquals(BeverageType.Soda, beverage.getDrinkType());
             assertEquals(BeverageTemperature.COLD, beverage.getTemperature());
             assertFalse(beverage.hasExtras());
-            assertEquals("It's hot out here. Enjoy your drink.....",beverage.getDrinkTips());
+         //   assertEquals("It's hot out here. Enjoy your drink.....",beverage.getDrink());
 
 
         }

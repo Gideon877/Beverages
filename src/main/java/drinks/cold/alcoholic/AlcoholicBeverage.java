@@ -8,4 +8,7 @@ public class AlcoholicBeverage extends ColdBeverage {
     public AlcoholicBeverage(BeverageType drinkType) {
         super(drinkType);
     }
+    public String getTips() {
+        return "Not for sale for person under 18yrs.";
+    }
 }

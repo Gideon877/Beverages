@@ -8,11 +8,7 @@ class NonAlcoholicBeverage extends ColdBeverage {
         super(drinkType);
     }
     @Override
-    public String getDrinkTips() {
-        System.out.println(ingredients.size()+ "-------");
-        if(hasIce()) {
-            return "Enjoy your drink with straw";
-        }
-        return "Enjoy your drink,,";
+    public String getTips() {
+        return "Did you hear about the guy who got hit in the head with a can of Coke? He was lucky it was a soft drink.";
     }
 }

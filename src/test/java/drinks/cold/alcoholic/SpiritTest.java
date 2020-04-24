@@ -23,6 +23,7 @@ class SpiritTest {
 
             assertTrue(beverage.hasIce());
             assertEquals(BeverageTemperature.COLD, beverage.getTemperature());
+            assertEquals("Take a shot", beverage.getTips());
         }
 
         @Test

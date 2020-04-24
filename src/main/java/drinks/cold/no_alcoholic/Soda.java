@@ -7,4 +7,8 @@ public class Soda extends NonAlcoholicBeverage {
         super(drinkType);
     }
 
+    @Override
+    public String getTips() {
+        return "I have a job crushing Coca-Cola cans. It's soda pressing.";
+    }
 }

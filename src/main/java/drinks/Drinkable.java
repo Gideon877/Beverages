@@ -6,8 +6,9 @@ import drinks.bar.IngredientType;
 
 public interface Drinkable {
     void addIngredients(IngredientType ingredientType);
-    String getDrinkTips();
+    String getDrink();
     BeverageType getDrinkType();
     BeverageTemperature getTemperature();
     boolean hasExtras();
+    String getTips();
 }

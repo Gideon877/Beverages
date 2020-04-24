@@ -23,6 +23,7 @@ class BeerTest {
 
             assertTrue(beverage.hasIce());
             assertEquals(BeverageTemperature.EXTREMELY_COLD, beverage.getTemperature());
+            assertEquals("What did the man with slab of asphalt under his arm order? \"A beer please, and one for the road.\"", beverage.getTips());
         }
 
         @Test

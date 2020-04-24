@@ -16,18 +16,22 @@ public class ColdBeverage extends Beverage {
     public boolean hasIce() {
         return ingredients.contains(IngredientType.Ice);
     }
-    public boolean hasExtras() {return super.hasExtras();}
-
-    @Override
-    public String getDrinkTips() {
-        return "It's hot out here. Enjoy your drink.....";
-    }
 
     @Override
     public BeverageTemperature getTemperature() {
-        if(hasIce()) {
-            return BeverageTemperature.EXTREMELY_COLD;
+        if(drinkType.equals(BeverageType.Spirit)) {
+            if(!hasIce()) {
+                return BeverageTemperature.ROOM_TEMPERATURE;
+            }
+        } else {
+            if(hasIce()) {
+                return BeverageTemperature.EXTREMELY_COLD;
+            }
         }
         return BeverageTemperature.COLD;
     }
+    public String getTips() {
+        return "Did you hear about the guy who got hit in the head with a can of Coke? He was lucky it was a soft drink.";
+    }
+
 }

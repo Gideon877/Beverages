@@ -48,7 +48,7 @@ class DrinkTemperatureTest {
         void warmCoffee() {
             Beverage beverage = new HotBeverage(BeverageType.Coffee);
             beverage.addIngredients(IngredientType.Milk);
-            System.out.println(beverage.getDrinkTips());
+            System.out.println(beverage.getDrink());
 
             assertEquals(BeverageTemperature.WARM, beverage.getTemperature());
         }

@@ -7,7 +7,8 @@ public class Juice extends NonAlcoholicBeverage {
         super(drinkType);
     }
 
-    public void drink() {
-        System.out.println("Drink Juice from a glass.");
+    @Override
+    public String getTips() {
+        return "I spilled a drink on a girl at a party and that's \"How I Wet Your Mother\". ";
     }
 }

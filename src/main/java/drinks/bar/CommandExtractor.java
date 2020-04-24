@@ -4,6 +4,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 import static com.sun.xml.internal.ws.util.StringUtils.capitalize;
+import static drinks.util.Colors.RED_BOLD;
+import static drinks.util.Colors.RESET;
 
 public class CommandExtractor {
         private final String drinkType;
@@ -31,12 +33,19 @@ public class CommandExtractor {
             return mine;
         }
 
-    public List<IngredientType> getExtras() {
-        return extras;
-    }
+        public List<IngredientType> getExtras() {
+            return extras;
+        }
 
-    public BeverageType getDrinkType() {
-            return BeverageType.valueOf(drinkType);
+        public BeverageType getDrinkType() {
+            try {
+                return BeverageType.valueOf(drinkType);
+            } catch (IllegalArgumentException e) {
+                System.out.println(RED_BOLD +"Valid commands: " + RESET + "[beverage type]  [extra] [extra] ...\n" +
+                        "e.g Tea Milk Sugar or Juice Ice\n"
+                );
+                return BeverageType.valueOf("Water");
+            }
         }
 
         public boolean hasExtra(IngredientType ingredientType) {
